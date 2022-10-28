@@ -1,3 +1,3 @@
-# navigator_in_listview
+Challenge Pengembangan Aplikasi Mobile using Android Studio
 
-https://youtu.be/q_nesGrGzfw
+Menampilkan list berita (Done 28/10/2022)
