@@ -12,18 +12,18 @@ class BeritaListScreen extends StatelessWidget {
         body: ListView.builder(
             itemCount: beritaList.length,
             itemBuilder: (context, index) {
-              Berita movie = beritaList[index];
+              Berita berita = beritaList[index];
               return Card(
                 child: ListTile(
-                  title: Text(movie.title),
-                  subtitle: Text(movie.year.toString()),
-                  leading: Image.network(movie.imageUrl),
+                  title: Text(berita.title),
+                  subtitle: Text(berita.year.toString()),
+                  leading: Image.network(berita.imageUrl),
                   trailing: Icon(Icons.arrow_forward_rounded),
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => BeritaDetailsScreen(movie)));
+                            builder: (context) => BeritaDetailsScreen(berita)));
                   },
                 ),
               );

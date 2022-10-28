@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:navigator_in_listview/model/movie.dart';
+import 'package:navigator_in_listview/model/berita.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
-  final Movie movie;
+  final Berita berita;
 
-  MovieDetailsScreen(this.movie);
+  BeritaDetailsScreen(this.berita);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(movie.title),
+        title: Text(berita.title),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -19,13 +19,13 @@ class MovieDetailsScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.network(
-                movie.imageUrl,
+                berita.imageUrl,
                 height: 500,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  movie.year.toString(),
+                  berita.year.toString(),
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 17.0, fontStyle: FontStyle.italic),
                 ),
@@ -33,7 +33,7 @@ class MovieDetailsScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  movie.description,
+                  berita.description,
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 22.0),
                 ),
